@@ -8,6 +8,7 @@ function MyComponent() {
     <>
       <div className= "intro">{name}</div>
       <input value={name} onChange={handleCahnge} />
+      <p>Hello React</p>
     </>
   );
 }

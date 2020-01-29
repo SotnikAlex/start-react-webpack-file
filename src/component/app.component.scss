@@ -1,6 +1,9 @@
-$color: red;
+$color: green;
 
 .intro {
   background-color: yellow;
   color: $color;
+}
+p {
+  color: $color
 }
