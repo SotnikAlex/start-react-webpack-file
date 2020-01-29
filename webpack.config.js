@@ -18,7 +18,7 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: "[name].css",
-      chunkFilename: "[id].css"
+      //chunkFilename: "[id].css"
     })
   ],
   module: {
@@ -31,15 +31,8 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
-        use: [
-          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
-          {
-            loader: "css-loader",
-            options: {
-              modules: true
-            }
-          }
+        test: /\.scss$/,
+        use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'
         ]
       },
       {
